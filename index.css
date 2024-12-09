@@ -1,0 +1,40 @@
+h1{
+    color:goldenrod;
+
+}
+body{
+    background-color:green;
+    text-align:center ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+    font-weight:bold;
+    
+}
+p{
+   
+    
+}
+#btn{
+    height:40px;
+    width:150px;
+    border-radius:10px;
+    font-size:medium;
+    background-color:goldenrod; 
+    text-align:center;
+    color:#016f32;
+    border-style:none;
+    margin:4px;
+
+}
+
+#btn1{
+    height:40px;
+    width:150px;
+    border-radius:10px;
+    font-size:medium;
+    background-color:goldenrod; 
+    text-align:center;
+    color:#016f32;
+    border-style:none;
+
+}
