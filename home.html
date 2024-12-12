@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-wclassth, initial-scale=.0">
+    <title>Calculator</title>
+    
+    <style>
+        body{
+            background:linear-gradient(60deg , #111111 ,#3a3a3a);
+        
+        }
+        .container{
+            height:500px;
+            width:350px;
+            padding:0px 5px;
+            margin:5px 500px;
+            border-style:ridge;
+            border-color:rgb(43, 35, 35);
+            color:white;
+            background-color:grey;
+            border-radius:30px;
+            
+            backdrop-filter: blur(30px);
+        }
+        #numbox{
+            padding:5px 21px;
+            margin:10px 28px;
+            width:250px;
+            cursor:pointer;
+            height:50px;
+            border-style:groove;
+            border-radius:5px;
+            border-color:green;
+            background:transparent;
+        }
+        .input{
+            
+            display:grid;
+            grid:100px;
+            grid-template-columns:auto auto auto auto;
+            grid-template-rows:auto auto auto auto ;
+            height:300px;
+            width:300px;
+            font-size:20px;
+            padding:5px 10px;
+            margin:5px 10px;
+
+        }
+        #nbutton{
+            background-color:red;
+            padding:0px 20px;
+            margin:5px 5px;
+            font-size:20px;
+            border-radius:20px;
+            border-color:rgb(7, 7, 5);
+            border-style:groove;
+            
+        }
+       
+
+        button{
+            font-size:20px;
+            padding:0px 15px;
+            width:70px;
+            margin:5px 5px;
+            backdrop-filter: blur(30px);
+            border-radius:20px;
+            background-color:rgb(19, 17, 17);
+             /* border-color:rgb(243, 243, 226);  */
+             box-shadow:-8px -8px  15px  rgba(251, 252, 252,0.4);
+            border-style:groove;
+            color:white;
+           
+        
+        }
+    
+        #nbutton1{
+            background-color:orange;
+            font-size:15px;
+            width:70px;
+            margin:5px 5px;
+            border-radius:20px;
+            border-color:rgb(41,41,31);
+            border-style:groove;
+            color:white;
+            
+        }
+        h1{
+            text-align:center;
+            font-size:30px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        button:hover{
+            border-color:rgb(7, 7, 7);
+            background-color:rgb(59, 57, 57);
+        }
+        
+        input{
+            text-align:right;
+            font-size:30px;
+            color:white;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CASIO 1924</h1>
+        <div class="output">
+        <input type="username" name="number"  id="numbox" placeholder="0" required>
+        </div>
+        <div class="input">
+            <button  class="nbutton" id="nbutton" onclick="clearDisplay()">AC</button>
+            <button class="nbutton" onclick="clearDisplay()">DE</button>
+            <button class="nbutton" onclick="appendCharacter('.')">.</button>
+            <button class="nbutton " onclick="appendCharacter('/')">/</button>
+            <button class="nbutton" onclick="appendCharacter('7')">7</button>
+            <button class="nbutton" onclick="appendCharacter('9')">8</button>
+            <button class="nbutton" onclick="appendCharacter('9')">9</button>
+            <button class="nbutton" onclick="appendCharacter('*')">*</button>
+            <button class="nbutton" onclick="appendCharacter('4')">4</button>
+            <button class="nbutton" onclick="appendCharacter('5')">5</button>
+            <button class="nbutton" onclick="appendCharacter('6')">6</button>
+            <button class="nbutton" onclick="appendCharacter('-')">-</button>
+            <button class="nbutton" onclick="appendCharacter('1')">1</button>
+            <button class="nbutton" onclick="appendCharacter('2')">2</button>
+            <button class="nbutton" onclick="appendCharacter('3')">3</button>
+            <button class="nbutton" onclick="appendCharacter('+')">+</button>
+            <button class="nbutton" onclick="appendCharacter('00')">00</button>
+            <button class="nbutton" onclick="appendCharacter('0')">0</button>
+            <button class="nbutton" onclick="calculate()">= </button>
+            <button  class="nbutton" id="nbutton1">ON/OFF</button>
+        </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function appendCharacter(char){
+    document.getElementById("numbox").value+=char;
+
+}
+function clearDisplay()
+{
+    document.getElementById("numbox").value='';
+}
+
+function calculate()
+{
+    let result=eval(document.getElementById("numbox").value);
+    document.getElementById("numbox").value=result;
+}
+    </script>
+</body>
+</html>
